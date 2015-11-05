@@ -10,23 +10,23 @@ T lines follow; each line contains an integer, N, that denotes the number of cyc
 import sys
 
 def utopian_tree():
-  cycles = []
-  numCycles = int(raw_input())
+	cycles = []
+	numCycles = int(raw_input())
 
-  for i in range(0, numCycles):
-    cycles.append(int(raw_input()))
+	for i in range(0, numCycles):
+		cycles.append(int(raw_input()))
 
-  for cycle in cycles:
-    treeHeight = getHeight(cycle)
-    print treeHeight
+	for cycle in cycles:
+		treeHeight = getHeight(cycle)
+		print treeHeight
 
 def getHeight(numCycles):
-  height = 1
-  for i in range(0, numCycles):
-    if(i%2 == 0):
-      height*=2
-    else:
-      height+=1
-  return height
+	height = 1
+	for i in range(0, numCycles):
+		if(i%2 == 0):
+			height*=2
+		else:
+			height+=1
+	return height
 
 utopian_tree()
