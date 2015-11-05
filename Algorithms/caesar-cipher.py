@@ -13,10 +13,6 @@ Input consists of an integer N equal to the length of the string, followed by th
 '''
 
 import string
-<<<<<<< HEAD
-=======
-import re
->>>>>>> e860304519c5d97b38cadfd1213ad3c04f81dedd
 
 def caesar_cipher():
 	result = []
@@ -29,7 +25,7 @@ def caesar_cipher():
 
 	shift_low=string.lowercase[l_shift:]+string.lowercase[:l_shift]
 	shift_up=string.uppercase[l_shift:]+string.uppercase[:l_shift]
-	shift_num= map(int, range(0, 10))[shift%9:]+map(int, range(0, 10))[:shift%9]
+	shift_num= map(int, range(0, 10))[shift:]+map(int, range(0, 10))[:shift]
 
 	for symbol in init_str:
 		if symbol.isalpha():
@@ -41,4 +37,7 @@ def caesar_cipher():
 			result.append(str(shift_num[(int(symbol))]))
 		else:
 			result.append(symbol)
+
+	print "".join(result)
+
 caesar_cipher()
