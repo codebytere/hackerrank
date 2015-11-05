@@ -13,6 +13,10 @@ Input consists of an integer N equal to the length of the string, followed by th
 '''
 
 import string
+<<<<<<< HEAD
+=======
+import re
+>>>>>>> e860304519c5d97b38cadfd1213ad3c04f81dedd
 
 def caesar_cipher():
 	result = []
@@ -21,6 +25,7 @@ def caesar_cipher():
 	init_str = raw_input()
 
 	shift = int(raw_input())
+<<<<<<< HEAD
 	l_shift = shift%26
 
 	shift_low=string.lowercase[l_shift:]+string.lowercase[:l_shift]
@@ -37,6 +42,20 @@ def caesar_cipher():
 			result.append(str(shift_num[(int(symbol))]))
 		else:
 			result.append(symbol)
+=======
+
+	shift_low=string.lowercase[shift:]+string.lowercase[:shift]
+	shift_up=string.uppercase[shift:]+string.uppercase[:shift]
+
+	for letter in init_str:
+		if re.match("\w", letter):
+			if letter.isupper():
+				result.append(shift_up[string.uppercase.index(letter)])
+			elif letter.islower():
+				result.append(shift_low[string.lowercase.index(letter)])
+		else:
+			result.append(letter)
+>>>>>>> e860304519c5d97b38cadfd1213ad3c04f81dedd
 	print "".join(result)
 
 caesar_cipher()
