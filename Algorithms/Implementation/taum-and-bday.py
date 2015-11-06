@@ -11,6 +11,7 @@ Input Format
 The first line will contain an integer T which will be the number of test cases.
 There will be T pairs of lines. The first line of each test case will contain the values of integers B and W. Another line of each test case will contain the values of integers X, Y, and Z.
 '''
+
 def taum_and_bday():
 	result = []
 	num_cases = int(raw_input())
