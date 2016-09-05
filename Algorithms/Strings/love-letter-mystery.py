@@ -13,13 +13,16 @@ The next T lines will contain a string each. The strings do not contain any spac
 '''
 
 def love_letter():
-	num_cases = int(input())
-	for case in range(num_cases):
-		reductions = 0
-		curr = input()
-		reductions += abs(
-				ord(curr[i]) - ord(curr[-(i+1)])
-		)
-		print(reductions)
+  num_cases = int(input())
+  ret = []
+  for case in range(num_cases):
+    reductions = 0
+    curr = input()
+    for i in range(0,len(curr)//2):
+      reductions += abs(ord(curr[i]) - ord(curr[-(i + 1)]))
+    ret.append(str(reductions))
+
+  print('\n'.join(ret))
 
 love_letter()
+
