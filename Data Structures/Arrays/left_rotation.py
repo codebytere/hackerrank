@@ -15,7 +15,7 @@ def left_rotate():
   arr = input().split(" ")
 
   ret = ""
-  for index in range(num_rotations + 1):
+  for index in range(num_ints):
     ret += arr[(index+num_rotations) % num_ints] + " "
   print(ret)
 
